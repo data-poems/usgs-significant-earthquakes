@@ -1,0 +1,18 @@
+{
+  "title": "USGS M4.5+ North American Earthquakes (2000-2025)",
+  "id": "lucassteuber/usgs-m45-north-american-earthquakes",
+  "licenses": [{"name": "CC0-1.0"}],
+  "subtitle": "3,742 significant earthquakes (magnitude 4.5+) across North America",
+  "description": "USGS Earthquake Hazards Program data filtered to magnitude 4.5+ events in North America from 2000-2025. Removes minor tremors to highlight earthquakes of scientific and public interest.",
+  "isPrivate": false,
+  "keywords": [
+    "earthquakes",
+    "usgs",
+    "seismology",
+    "geospatial",
+    "natural-disasters",
+    "north-america",
+    "earth-science",
+    "geology"
+  ]
+}
