@@ -49,16 +49,6 @@ dataset_info:
 - Complete coordinates for mapping
 - Removes 92.5% of minor tremors
 
-## Why M4.5+ Matters
-
-The Richter scale is logarithmic. A M4.5 earthquake:
-- Felt over a wide area
-- Can cause minor damage near epicenter
-- Registered by seismographs worldwide
-- News-worthy events
-
-Minor earthquakes (M<4.5) happen constantly but go unnoticed by most people.
-
 ## Geographic Coverage
 
 | Region | Latitude | Longitude |
@@ -106,9 +96,7 @@ yearly = df.groupby('year').size()
 
 ## Source & License
 
-**Public Domain** - U.S. Government Work
-
-Data from USGS Earthquake Hazards Program.
+Public Domain -- U.S. Government Work. Data from USGS Earthquake Hazards Program.
 
 https://earthquake.usgs.gov/earthquakes/
 
