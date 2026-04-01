@@ -26,7 +26,7 @@ USGS Earthquake Hazards Program data filtered to magnitude 4.5+ events in North 
 
 ## Dataset Structure
 
-[Check the demo notebook for data exploration examples]
+See `demo_notebook.ipynb` for data exploration examples.
 
 ## Usage
 
