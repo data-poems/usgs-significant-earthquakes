@@ -57,7 +57,6 @@ with open('data.json') as f:
 ## Distribution
 
 - **GitHub**: [lukeslp/usgs-significant-earthquakes](https://github.com/lukeslp/usgs-significant-earthquakes)
-- **Kaggle**: [lucassteuber/usgs-significant-earthquakes](https://www.kaggle.com/datasets/lucassteuber/usgs-significant-earthquakes)
 
 ## Author
 
