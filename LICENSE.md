@@ -20,7 +20,7 @@ The underlying data comes from **USGS Earthquake Hazards Program**, which is a U
 
 ```
 Steuber, L. (2026). USGS M4.5+ North American Earthquakes [Dataset].
-Kaggle. https://www.kaggle.com/datasets/lucassteuber/usgs-m45-north-american-earthquakes
+Hugging Face. https://huggingface.co/datasets/lukeslp/usgs-significant-earthquakes
 ```
 
 Original data: USGS Earthquake Hazards Program

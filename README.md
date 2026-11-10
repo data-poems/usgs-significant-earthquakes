@@ -30,8 +30,18 @@ dataset_info:
       dtype: string
     - name: date
       dtype: string
+    - name: time_utc
+      dtype: string
+    - name: country
+      dtype: string
     - name: magnitude
       dtype: float64
+    - name: depth_km
+      dtype: float64
+    - name: place
+      dtype: string
+    - name: earthquake_type
+      dtype: string
   splits:
     - name: train
       num_examples: 3742
@@ -64,15 +74,26 @@ Covers continental US, Canada, Mexico, Alaska, and Caribbean.
 
 ```json
 {
-  "latitude": 34.0522,
-  "longitude": -118.2437,
-  "name": "10km SSE of Ridgecrest, CA",
-  "description": "M7.1 earthquake",
-  "category": "usgs_earthquakes",
+  "latitude": 35.7695,
+  "longitude": -117.5993333,
+  "name": "Ridgecrest Earthquake Sequence",
+  "description": "Magnitude 7.1 earthquake - Ridgecrest Earthquake Sequence. Depth: 8km.",
+  "category": "significant_earthquakes",
   "date": "2019-07-06",
-  "magnitude": 7.1
+  "time_utc": "2019-07-06T03:19:53.040Z",
+  "country": null,
+  "magnitude": 7.1,
+  "depth_km": 8.0,
+  "place": "Ridgecrest Earthquake Sequence",
+  "earthquake_type": "earthquake"
 }
 ```
+
+- `date` is the UTC calendar day. `time_utc` is the exact origin time in ISO 8601.
+- `country` is empty in every record.
+- `earthquake_type` is `earthquake` for 3,739 records, `explosion` for 2 and `landslide` for 1.
+
+Until November 2026 the `date` field was broken: it held a millisecond timestamp with `-01-01` appended. That is fixed, and `time_utc` was added at the same time.
 
 ## Usage
 
@@ -96,19 +117,14 @@ yearly = df.groupby('year').size()
 
 ## Source & License
 
-Public Domain -- U.S. Government Work. Data from USGS Earthquake Hazards Program.
+Public domain (U.S. government work). Data from the USGS Earthquake Hazards Program.
 
 https://earthquake.usgs.gov/earthquakes/
 
 ## Distribution
 
-- **Kaggle**: [lucassteuber/usgs-significant-earthquakes](https://www.kaggle.com/datasets/lucassteuber/usgs-significant-earthquakes)
 - **HuggingFace**: [lukeslp/usgs-significant-earthquakes](https://huggingface.co/datasets/lukeslp/usgs-significant-earthquakes)
 - **GitHub Gist**: [Demo Notebook](https://gist.github.com/lukeslp/98c82e896ad688a4fc0407a3b76e59f7)
-
-## Author
-
-Luke Steuber | luke@lukesteuber.com | @lukesteuber.com (Bluesky)
 
 ## Structured Data (JSON-LD)
 
@@ -118,8 +134,7 @@ Luke Steuber | luke@lukesteuber.com | @lukesteuber.com (Bluesky)
   "@type": "Dataset",
   "name": "USGS M4.5+ North American Earthquakes (2000-2025)",
   "description": "3,742 significant earthquakes (magnitude 4.5+) across North America from USGS Earthquake Hazards Program. Filters out 92.5% of minor tremors.",
-  "url": "https://www.kaggle.com/datasets/lucassteuber/usgs-significant-earthquakes",
-  "sameAs": "https://huggingface.co/datasets/lukeslp/usgs-significant-earthquakes",
+  "url": "https://huggingface.co/datasets/lukeslp/usgs-significant-earthquakes",
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "creator": {
     "@type": "Person",
@@ -136,7 +151,7 @@ Luke Steuber | luke@lukesteuber.com | @lukesteuber.com (Bluesky)
     {
       "@type": "DataDownload",
       "encodingFormat": "application/json",
-      "contentUrl": "https://www.kaggle.com/datasets/lucassteuber/usgs-significant-earthquakes"
+      "contentUrl": "https://huggingface.co/datasets/lukeslp/usgs-significant-earthquakes"
     }
   ]
 }
